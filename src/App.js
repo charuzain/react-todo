@@ -1,22 +1,13 @@
 import React from "react";
-
-const todoList = [
-  { id: 1, title: "Learn Dart" },
-  { id: 2, title: "Install flutter sdk and Android studio" },
-  { id: 3, title: "Set up an android and iOS emulator" },
-  { id: 4, title: "Learn about various widgets in flutter" },
-];
+import TodoList from "./TodoList";
+import AddTodoForm from "./AddTodoForm";
 
 function App() {
   return (
     <>
       <h1 className="heading text-center">Todo List</h1>
-      
-      <ul style={{ listStyleType: "none" }} className="list-group px-5 d-flex justify-content-start text-center" >
-        {todoList.map((item) => (
-          <li key={item.id} style={{ height: "70px" }}className="list-group-item bg-secondary text-light my-1 ">{item.title}</li>
-        ))}
-      </ul>
+      <TodoList />
+      <AddTodoForm/>
     </>
   );
 }
