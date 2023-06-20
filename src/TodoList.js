@@ -1,4 +1,6 @@
 import React from 'react'
+import TodoListItem from './TodoListItem';
+
 
 const todoList = [
   { id: 1, title: "Learn Dart" },
@@ -9,8 +11,8 @@ const todoList = [
 function TodoList() {
   return (
     <ul style={{ listStyleType: "none" }} className="list-group px-5 d-flex justify-content-start text-center" >
-        {todoList.map((item) => (
-          <li key={item.id} style={{ height: "70px" }}className="list-group-item bg-secondary text-light my-1 ">{item.title}</li>
+      {todoList.map((todo) => (<TodoListItem key={todo.id} todo={todo} />
+         
         ))}
       </ul>
   )
